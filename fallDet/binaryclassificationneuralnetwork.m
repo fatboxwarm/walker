@@ -47,7 +47,7 @@ costFunction = @(p) linCostFunction(p, input_layer_size, hidden_layer_size, ...
     output_layer_size, X, y, lambda, alpha, nbweightmatrices);
 % Now, costFunction is a function that takes in only one argument (the
 % neural network parameters)
-options = optimset('MaxIter', 1000000);
+options = optimset('MaxIter', 10);
 [nn_params, ~] = fmincg(costFunction, initial_nn_params, options);
 
 %test and predict
